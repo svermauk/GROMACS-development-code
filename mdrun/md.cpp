@@ -217,7 +217,7 @@ void gmx::Integrator::do_md()
     // signals, and will use this object to achieve that.
     SimulationSignaller nullSignaller(nullptr, nullptr, nullptr, false, false);
     
-//    printf("@@@@@@@@@@@@@@@@@@    Hi I am Shivani.       @@@@@@@@@@@@@@@@@@@@@@@@\n");
+//    printf("@@@@@@@@@@@@@@@@@@    Hi I am Shivani Verma.       @@@@@@@@@@@@@@@@@@@@@@@@\n");
     fprintf(fplog,"@@@@@@@@@@@@@@@@@@     Hi I am Shivani.       @@@@@@@@@@@@@@@@@@@@@@@@\n");
     if (!mdrunOptions.writeConfout)
     {
