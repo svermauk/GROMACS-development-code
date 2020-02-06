@@ -51,8 +51,6 @@
 #include <algorithm>
 #include <memory>
 
-#include <iostream>//   Edited by Shivani
-#include <random>//     Edited by Shivani
 #include "gromacs/awh/awh.h"
 #include "gromacs/commandline/filenm.h"
 #include "gromacs/compat/make_unique.h"
@@ -136,8 +134,6 @@
 #include "gromacs/utility/logger.h"
 #include "gromacs/utility/real.h"
 #include "gromacs/utility/smalloc.h"
-#include "gromacs/random/tabulatednormaldistribution.h"  //Edited by Shivani
-#include "gromacs/random/threefry.h"  //Edited by Shivani
 
 #include "integrator.h"
 #include "replicaexchange.h"
@@ -147,6 +143,7 @@
 #endif
 
 using gmx::SimulationSignaller;
+
 /*----------         Edited by Shivani          ---------- */
 double gauss_dist(double x1, double x2)
 {   
@@ -165,6 +162,8 @@ double gauss_dist(double x1, double x2)
 //    z2=s*DSQRT(-2.0*LOG(x2))*SIN(2.0*3.14*x1)
     return z1 ;
 }
+/*----------         Edited by Shivani          ---------- */
+
 void gmx::Integrator::do_md()
 {
     // TODO Historically, the EM and MD "integrators" used different
@@ -215,7 +214,6 @@ void gmx::Integrator::do_md()
     t_extmass               MassQ;
     int                   **trotter_seq;
     char                    sbuf[STEPSTRSIZE], sbuf2[STEPSTRSIZE];
-    int                     seed;  //Shivani
     /* PME load balancing data for GPU kernels */
     pme_load_balancing_t *pme_loadbal      = nullptr;
     gmx_bool              bPMETune         = FALSE;
